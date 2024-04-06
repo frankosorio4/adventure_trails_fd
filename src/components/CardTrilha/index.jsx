@@ -4,9 +4,11 @@ import "./style.css"
 function CardTrilha({dadosTrilha}){
     return(
         <div className="card_container"> 
-            <img className="card_imagen" width={200} src={dadosTrilha.urlImagen} alt="imagen trilha" />
-            <h1>{dadosTrilha.nomeTrilha}</h1>
-            <span>{dadosTrilha.cidade} / {dadosTrilha.estado}</span>
+            <img className="card_imagen" width={200} src={dadosTrilha.urlImagen} alt="imagen dadosTrilha" />
+            <div className="divDadosTrilha">
+                <h1 className="nomeTrilha">{dadosTrilha.nomeTrilha}</h1>
+                <span>{dadosTrilha.cidade} / {dadosTrilha.estado}</span>
+            </div>
         </div>
     )
 }
