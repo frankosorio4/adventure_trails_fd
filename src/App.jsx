@@ -31,3 +31,8 @@ function App() {
 }
 
 export default App
+
+//imagen trilha principal
+//https://images.pexels.com/photos/2132087/pexels-photo-2132087.jpeg
+// imagen trilha card
+//https://images.pexels.com/photos/917510/pexels-photo-917510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
