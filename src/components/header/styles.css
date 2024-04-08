@@ -1,0 +1,28 @@
+.headerContainer{
+    width: 100%;
+}
+
+.navHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #504908;
+    font-weight: 600;
+    height: 80px;
+    padding: 30px;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.headerLeft{
+    margin-left: 20px;
+}
+
+.headerRight{
+    display: flex;
+    gap: 20px;
+}

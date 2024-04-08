@@ -4,9 +4,9 @@ import "./style.css"
 function CardTrilha({dadosTrilha}){
     return(
         <div className="card_container"> 
-            <img className="card_imagen" width={200} src={dadosTrilha.urlImagen} alt="imagen dadosTrilha" />
+            <img className="card_imagen" src={dadosTrilha.urlImagen} alt="imagen dadosTrilha" />
             <div className="divDadosTrilha">
-                <h1 className="nomeTrilha">{dadosTrilha.nomeTrilha}</h1>
+                <h2 className="nomeTrilha">{dadosTrilha.nomeTrilha}</h2>
                 <span>{dadosTrilha.cidade} / {dadosTrilha.estado}</span>
             </div>
         </div>
