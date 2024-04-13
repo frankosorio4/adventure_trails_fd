@@ -1,11 +1,14 @@
 /* global varibles and configurations */
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Comfortaa", sans-serif;
 }
 
-/* TO AVOID SHOW HORIZONTAL BAR */
-/* #root {
-    overflow-x: hidden;
-} */
+.container{
+    padding-top: 4em;
+}

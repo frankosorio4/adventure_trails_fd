@@ -1,5 +1,6 @@
 .headerContainer{
     width: 100%;
+    position: fixed;
 }
 
 .navHeader{
@@ -8,7 +9,8 @@
     align-items: center;
     background-color: #504908;
     font-weight: 600;
-    height: 80px;
+    height: 3.5em;
+    /* height: 80px; */
     padding: 30px;
     font-size: 18px;
 }
