@@ -1,0 +1,27 @@
+.footerContainer{
+    margin-top: 30px;
+    bottom: 0;
+    width: 100vw;
+    background-color: #504908;
+    height: 3em;
+    font-size: 18px;
+    padding-left: 30px;
+    padding-right: 30px;
+    align-content: center;
+    /* height: 60px; */
+}
+
+.divFooter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.divFooterText{
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.navFooter a{
+    margin-left: 15px;
+}

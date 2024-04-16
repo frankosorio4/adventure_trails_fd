@@ -2,13 +2,21 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Comfortaa", sans-serif;
 }
 
-.container{
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
     padding-top: 3.9em;
+}
+
+.titulo {
+    margin: 2em auto;
 }
