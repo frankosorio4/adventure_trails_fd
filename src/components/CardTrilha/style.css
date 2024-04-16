@@ -15,9 +15,31 @@
     border-bottom-left-radius: 10px;
 }
 
-.divDadosTrilha{
+.div0DadosTrilha{
     display: flex;
     flex-direction: column;
     padding: 10px;
     gap: 10px;
+}
+
+.div1DadosTrilha{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.div2DadosTrilha{
+    display: flex;
+    flex-direction: column;
+}
+
+.div2DadosTrilha span{
+    margin: 5px 3px 5px 10px;
+}
+
+.spanDificuldade{
+    margin-left: 20px;
+    background-color: lightgrey;
+    padding: 4px;
+    border: none;
+    border-radius: 5px;
 }
