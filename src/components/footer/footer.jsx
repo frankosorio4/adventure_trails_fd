@@ -1,4 +1,4 @@
-import style from "./footer.module.css"
+import style from "./footer.module.css";
 
 function Footer() {
 
@@ -9,9 +9,15 @@ function Footer() {
                     Adventure Trails FD
                 </div>
                 <nav className={style.navFooter}>
-                    <a href="#">link1</a>
-                    <a href="#">link2</a>
-                    <a href="#">link3</a>
+                    <a href="https://github.com/" target="_blank">
+                        <i className='bx bxl-github bx-sm' style={{ color: 'white' }}></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank">
+                        <i className='bx bxl-linkedin bx-sm' style={{ color: 'white' }}></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <i className='bx bxl-instagram-alt bx-sm' style={{ color: 'white' }}></i>
+                    </a>
                 </nav>
             </div>
         </div>
@@ -19,3 +25,6 @@ function Footer() {
 };
 
 export default Footer;
+
+//https://boxicons.com/
+//sizes bx-xs  bx-sm  bx-md  bx-lg

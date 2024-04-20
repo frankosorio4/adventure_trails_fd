@@ -37,6 +37,7 @@
 }
 
 .spanDificuldade{
+    width: auto;
     margin-left: 20px;
     background-color: lightgrey;
     padding: 4px;
