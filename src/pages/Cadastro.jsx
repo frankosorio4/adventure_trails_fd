@@ -30,6 +30,7 @@ function Cadastro() {
         addTrail(
             {
                 ...formValues,
+                //debido a que el formulario lo guarda como string
                 duracao: Number(formValues.duracao),
                 trajeto: Number(formValues.trajeto)
             }
@@ -75,7 +76,6 @@ function Cadastro() {
                             <TextField
                                 id="cidade-trilha"
                                 sx={{ mt: 1, width: '18em' }}
-                                // label="Digite o nome da cidade"
                                 variant="outlined"
                                 {...register("cidade",
                                     {
@@ -100,7 +100,6 @@ function Cadastro() {
                             <TextField
                                 id="estado-trilha"
                                 sx={{ mt: 1, width: '18em' }}
-                                // label="Digite o estado"
                                 variant="outlined"
                                 {...register("estado",
                                     {
@@ -128,7 +127,6 @@ function Cadastro() {
                                 id="duracao-trilha"
                                 type="number"
                                 sx={{ mt: 1, width: '18em' }}
-                                // label="Digite a duracao em minutos"
                                 variant="outlined"
                                 {...register("duracao",
                                     {
@@ -155,7 +153,6 @@ function Cadastro() {
                                 type="number"
                                 step={0.01}
                                 sx={{ mt: 1, width: '18em' }}
-                                // label="Digite a distancia em Km"
                                 variant="outlined"
                                 {...register("trajeto",
                                     {
@@ -217,7 +214,6 @@ function Cadastro() {
                         <TextField
                             id="nome-usuario"
                             sx={{ mt: 1 }}
-                            // label="Seu nome completo"
                             variant="outlined"
                             {...register("nomeUsuario",
                                 {
@@ -242,7 +238,6 @@ function Cadastro() {
                         <TextField
                             id="url-imagen-trilha"
                             sx={{ mt: 1 }}
-                            // label="Url da imagen"
                             variant="outlined"
                             {...register("urlImagen",
                                 {
@@ -272,7 +267,10 @@ function Cadastro() {
                         <Button
                             variant="outlined"
                             sx={{ fontWeight: 'bold' }}
-                            onClick={() => navigate("/")}
+                            onClick={() => navigate("/",
+                                window.scrollTo({ top: 0 })
+                            )
+                            }
                         >Voltar
                         </Button>
                     </div>
