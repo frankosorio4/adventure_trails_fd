@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import TextField from '@mui/material/TextField'
 import { Select, InputLabel, MenuItem, FormControl } from '@mui/material'
 import Button from '@mui/material/Button'
@@ -7,6 +7,7 @@ import { createTheme } from '@mui/material/styles'
 import { ThemeProvider } from '@mui/material/styles'
 import { useForm } from "react-hook-form"
 import { useNavigate } from 'react-router-dom'
+import { TrilhasContext } from '../context/TrilhasContext'
 
 function Cadastro() {
 
@@ -22,9 +23,18 @@ function Cadastro() {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
+    const {addTrail} =useContext(TrilhasContext);
+
     function onSubmit(formValues) {
         console.log(formValues);
-        // navigate("/lista-trilhas");
+        addTrail(
+            {
+                ...formValues,
+                duracao: Number(formValues.duracao),
+                trajeto: Number(formValues.trajeto)
+            }
+        )
+        navigate("/listatrilhas");
     };
 
     return (
@@ -45,18 +55,18 @@ function Cadastro() {
                                 {
                                     required: "Campo Obrigatorio",
                                     minLength: {
-                                        value: 1,
-                                        message: "Minimo 5 careateres"
+                                        value: 5,
+                                        message: "Mínimo 5 caracteres."
                                     },
                                     maxLength: {
                                         value: 100,
-                                        message: "Maximo de 100 carateres"
+                                        message: "Máximo de 100 caracteres"
                                     }
                                 }
                             )
                             }
                         />
-                        {errors.nomeTrilha && <p>{errors.nomeTrilha.message}</p>}
+                        {errors.nomeTrilha && <p className={style.pError}>{errors.nomeTrilha.message}</p>}
                     </div>
 
                     <div className={style.divTextField2}>
@@ -71,18 +81,18 @@ function Cadastro() {
                                     {
                                         required: "Campo Obrigatorio",
                                         minLength: {
-                                            value: 1,
-                                            message: "Minimo 3 careateres"
+                                            value: 3,
+                                            message: "Mínimo 3 caracteres"
                                         },
                                         maxLength: {
                                             value: 60,
-                                            message: "Maximo de 60 carateres"
+                                            message: "Máximo de 60 caracteres"
                                         }
                                     }
                                 )
                                 }
                             />
-                            {errors.cidade && <p>{errors.cidade.message}</p>}
+                            {errors.cidade && <p className={style.pError}>{errors.cidade.message}</p>}
                         </div>
 
                         <div>
@@ -97,17 +107,17 @@ function Cadastro() {
                                         required: "Campo Obrigatorio",
                                         minLength: {
                                             value: 1,
-                                            message: "Minimo 2 careateres"
+                                            message: "Mínimo 2 caracteres"
                                         },
                                         maxLength: {
                                             value: 2,
-                                            message: "Maximo de 2 carateres"
+                                            message: "Máximo de 2 caracteres"
                                         }
                                     }
                                 )
                                 }
                             />
-                            {errors.estado && <p>{errors.estado.message}</p>}
+                            {errors.estado && <p className={style.pError}>{errors.estado.message}</p>}
                         </div>
                     </div>
 
@@ -125,17 +135,17 @@ function Cadastro() {
                                         required: "Campo Obrigatorio",
                                         minLength: {
                                             value: 2,
-                                            message: "Minimo 2 careateres"
+                                            message: "Mínimo 2 caracteres"
                                         },
                                         maxLength: {
                                             value: 4,
-                                            message: "Maximo de 4 carateres"
+                                            message: "Máximo de 4 caracteres"
                                         }
                                     }
                                 )
                                 }
                             />
-                            {errors.duracao && <p>{errors.duracao.message}</p>}
+                            {errors.duracao && <p className={style.pError}>{errors.duracao.message}</p>}
                         </div>
 
                         <div>
@@ -152,17 +162,17 @@ function Cadastro() {
                                         required: "Campo Obrigatorio",
                                         minLength: {
                                             value: 1,
-                                            message: "Minimo 1 careateres"
+                                            message: "Mínimo 1 caracteres"
                                         },
                                         maxLength: {
                                             value: 4,
-                                            message: "Maximo de 4 carateres"
+                                            message: "Máximo de 4 caracteres"
                                         }
                                     }
                                 )
                                 }
                             />
-                            {errors.trajeto && <p>{errors.trajeto.message}</p>}
+                            {errors.trajeto && <p className={style.pError}>{errors.trajeto.message}</p>}
                         </div>
                     </div>
 
@@ -174,13 +184,14 @@ function Cadastro() {
                                 defaultValue=""
                                 sx={{ mt: 1, width: '18em' }}
                                 {...register('dificuldade',
-                                    { required: true }
+                                    { required: "Campo Obrigatorio" }
                                 )}
                             >
                                 <MenuItem value="Iniciante">Iniciante</MenuItem>
                                 <MenuItem value="Intermediário">Intermediário</MenuItem>
                                 <MenuItem value="Difícil">Difícil</MenuItem>
                             </Select>
+                            {errors.dificuldade && <p className={style.pError}>{errors.dificuldade.message}</p>}
                         </div>
                         <div>
                             <div>Tipo de Trilha</div>
@@ -189,13 +200,15 @@ function Cadastro() {
                                 defaultValue=""
                                 sx={{ mt: 1, width: '18em' }}
                                 {...register('tipo',
-                                    { required: true }
+                                    // { required: true }
+                                    { required: "Campo Obrigatorio" }
                                 )}
                             >
                                 <MenuItem value="Caminhada">Caminhada</MenuItem>
                                 <MenuItem value="Trekking">Trekking</MenuItem>
                                 <MenuItem value="Bicicleta">Bicicleta</MenuItem>
                             </Select>
+                            {errors.tipo && <p className={style.pError}>{errors.tipo.message}</p>}
                         </div>
                     </div>
 
@@ -211,17 +224,17 @@ function Cadastro() {
                                     required: "Campo Obrigatorio",
                                     minLength: {
                                         value: 5,
-                                        message: "Minimo 5 careateres"
+                                        message: "Mínimo 5 caracteres"
                                     },
                                     maxLength: {
                                         value: 60,
-                                        message: "Maximo de 60 carateres"
+                                        message: "Máximo de 60 caracteres"
                                     }
                                 }
                             )
                             }
                         />
-                        {errors.nomeUsuario && <p>{errors.nomeUsuario.message}</p>}
+                        {errors.nomeUsuario && <p className={style.pError}>{errors.nomeUsuario.message}</p>}
                     </div>
 
                     <div className={style.divTextField1}>
@@ -236,17 +249,17 @@ function Cadastro() {
                                     required: "Campo Obrigatorio",
                                     minLength: {
                                         value: 10,
-                                        message: "Minimo 10 careateres"
+                                        message: "Mínimo 10 caracteres"
                                     },
                                     maxLength: {
                                         value: 300,
-                                        message: "Maximo de 300 carateres"
+                                        message: "Máximo de 300 caracteres"
                                     }
                                 }
                             )
                             }
                         />
-                        {errors.urlImagen && <p>{errors.urlImagen.message}</p>}
+                        {errors.urlImagen && <p className={style.pError}>{errors.urlImagen.message}</p>}
                     </div>
 
                     <div className={style.divBtn}>
@@ -271,25 +284,6 @@ function Cadastro() {
 
 export default Cadastro;
 
-
-//<div>
-//<div>Dificudade</div>
-//{/* <InputLabel id="demo-simple-select-label">Age</InputLabel> */}
-//<FormControl>
-//    <Select
-//        //value={dificuldade}// Set default value
-//        sx={{ mt: 1, width: '18em' }}
-//onChange={handleChange}
-//        {...register("dificuldade")}
-//     {required: "Campo Obrigatorio"} ) }
-//    >
-//        {/* <MenuItem value=""><em>None</em></MenuItem> */}
-//        <MenuItem value="Iniciante">Iniciante</MenuItem>
-//        <MenuItem value="Intermediário">Intermediário</MenuItem>
-//        <MenuItem value="Difícil">Difícil</MenuItem>
-//    </Select>
-//</FormControl>
-//</div>
 
 //Validacao
 // Nome da trilha: string-required-100 caracteres;

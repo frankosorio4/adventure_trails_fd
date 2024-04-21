@@ -22,3 +22,8 @@
     align-items: center;
     gap: 10px;
 }
+
+.pError{
+    margin-top: 5px;
+    color:red;
+}
