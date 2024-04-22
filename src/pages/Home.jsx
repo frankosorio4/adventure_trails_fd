@@ -24,19 +24,6 @@ function Home() {
                         <div className={style.divHome1Text}>
                             Junte-se à comunidade de entusiastas ao ar livre, compartilhe suas aventuras e inspire-se com as experiências de outros aventureiros. Prepare-se para explorar novos horizontes e se conectar com a natureza através do Adventure Trails!
                         </div>
-                        <div>
-                            <Button
-                                variant="contained"
-                                size="medium"
-                                sx={{ mt: 10, fontWeight: 'bold' }}
-                                onClick={() => navigate(
-                                    "/listatrilhas",
-                                    window.scrollTo({ top: 0 })
-                                )
-                                }
-                            >Explorar Trilhas
-                            </Button>
-                        </div>
                     </div>
                 </div>
                 <div className={style.divHome2}>
