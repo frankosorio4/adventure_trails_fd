@@ -151,7 +151,7 @@ function Cadastro() {
                             <TextField
                                 id="Trajeto-trilha"
                                 type="number"
-                                placeholder='Numero decimal com ponto'
+                                // placeholder='Numero decimal com ponto'
                                 inputProps={{ step: 0.1 }}
                                 // inputProps={{ step: 'any' }}
                                 sx={{ mt: 1, width: '18em' }}
