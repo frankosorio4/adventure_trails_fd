@@ -2,9 +2,9 @@
     display: flex;
     width: 50%;
     box-shadow: .2em .2em .8em  black;
-    height: 15em;
+    height: auto;
+    /* height: 16em; */
     margin: 10px auto;
-    /* background-color: red; */
     border-radius: 10px;
 }
 
@@ -15,32 +15,26 @@
     border-bottom-left-radius: 10px;
 }
 
-.div0DadosTrilha{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    gap: 10px;
-}
-
 .div1DadosTrilha{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 15px;
+    margin-top: 10px;
+    margin-left: 10px;
+    gap: 10px;
 }
 
 .div2DadosTrilha{
     display: flex;
     flex-direction: column;
+    margin-left: 15px;
+    gap: 15px;
 }
 
-.div2DadosTrilha span{
-    margin: 5px 3px 5px 10px;
-}
-
-.spanDificuldade{
-    width: auto;
-    margin-left: 20px;
+.spanDif{
     background-color: lightgrey;
     padding: 4px;
     border: none;
     border-radius: 5px;
+    display: inline-block;
 }
