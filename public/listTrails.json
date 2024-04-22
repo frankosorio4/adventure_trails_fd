@@ -5,7 +5,7 @@
         "duracao": 120,
         "trajeto": 4,
         "dificuldade": "Iniciante",
-        "tipo": "caminhada / trekking",
+        "tipo": "Caminhada",
         "nomeUsuario": "frank",
         "urlImagen": "https://images.pexels.com/photos/917510/pexels-photo-917510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
@@ -15,7 +15,7 @@
         "duracao": 120,
         "trajeto": 6.77,
         "dificuldade": "Iniciante",
-        "tipo": "caminhada / trekking",
+        "tipo": "Caminhada",
         "nomeUsuario": "frank",
         "urlImagen": "https://images.pexels.com/photos/917510/pexels-photo-917510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
@@ -25,7 +25,7 @@
         "duracao": 60,
         "trajeto": 2.5,
         "dificuldade": "Intermediário",
-        "tipo": "caminhada / trekking",
+        "tipo": "Caminhada / trekking",
         "nomeUsuario": "frank",
         "urlImagen": "https://images.pexels.com/photos/917510/pexels-photo-917510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
@@ -35,7 +35,7 @@
         "duracao": 60,
         "trajeto": 2.6,
         "dificuldade": "Iniciante",
-        "tipo": "caminhada / trekking",
+        "tipo": "Caminhada",
         "nomeUsuario": "frank",
         "urlImagen": "https://images.pexels.com/photos/917510/pexels-photo-917510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
@@ -45,7 +45,7 @@
         "duracao": 20,
         "trajeto": 0.5,
         "dificuldade": "Iniciante",
-        "tipo": "caminhada / trekking",
+        "tipo": "Caminhada",
         "nomeUsuario": "frank",
         "urlImagen": "https://images.pexels.com/photos/917510/pexels-photo-917510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
@@ -55,7 +55,7 @@
         "duracao": 30,
         "trajeto": 2,
         "dificuldade": "Iniciante",
-        "tipo": "caminhada / trekking",
+        "tipo": "Caminhada",
         "nomeUsuario": "frank",
         "urlImagen": "https://images.pexels.com/photos/917510/pexels-photo-917510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
@@ -65,7 +65,7 @@
         "duracao": 60,
         "trajeto": 4,
         "dificuldade": "Iniciante",
-        "tipo": "caminhada / trekking",
+        "tipo": "Caminhada",
         "nomeUsuario": "frank",
         "urlImagen": "https://images.pexels.com/photos/917510/pexels-photo-917510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
@@ -75,7 +75,7 @@
         "duracao": 120,
         "trajeto": 6,
         "dificuldade": "Intermediário",
-        "tipo": "caminhada / trekking",
+        "tipo": "Caminhada",
         "nomeUsuario": "frank",
         "urlImagen": "https://images.pexels.com/photos/917510/pexels-photo-917510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
@@ -85,7 +85,7 @@
         "duracao": 60,
         "trajeto": 3,
         "dificuldade": "Iniciante",
-        "tipo": "caminhada / trekking",
+        "tipo": "Caminhada",
         "nomeUsuario": "frank",
         "urlImagen": "https://images.pexels.com/photos/917510/pexels-photo-917510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
@@ -95,7 +95,7 @@
         "duracao": 160,
         "trajeto": 8,
         "dificuldade": "Intermediário",
-        "tipo": "caminhada / trekking",
+        "tipo": "Trekking",
         "nomeUsuario": "frank",
         "urlImagen": "https://images.pexels.com/photos/917510/pexels-photo-917510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     }

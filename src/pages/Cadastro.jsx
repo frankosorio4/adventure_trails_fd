@@ -1,6 +1,6 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import TextField from '@mui/material/TextField'
-import { Select, InputLabel, MenuItem, FormControl } from '@mui/material'
+import { Select, MenuItem } from '@mui/material'
 import Button from '@mui/material/Button'
 import style from "./cadastro.module.css"
 import { createTheme } from '@mui/material/styles'
@@ -23,7 +23,7 @@ function Cadastro() {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
-    const {addTrail} =useContext(TrilhasContext);
+    const { addTrail } = useContext(TrilhasContext);
 
     function onSubmit(formValues) {
         console.log(formValues);
@@ -151,7 +151,9 @@ function Cadastro() {
                             <TextField
                                 id="Trajeto-trilha"
                                 type="number"
-                                step={0.01}
+                                placeholder='Numero decimal com ponto'
+                                inputProps={{ step: 0.1 }}
+                                // inputProps={{ step: 'any' }}
                                 sx={{ mt: 1, width: '18em' }}
                                 variant="outlined"
                                 {...register("trajeto",
@@ -177,7 +179,6 @@ function Cadastro() {
                         <div>
                             <div>Dificudade</div>
                             <Select
-                                // value=""
                                 defaultValue=""
                                 sx={{ mt: 1, width: '18em' }}
                                 {...register('dificuldade',
@@ -193,7 +194,6 @@ function Cadastro() {
                         <div>
                             <div>Tipo de Trilha</div>
                             <Select
-                                // value=""
                                 defaultValue=""
                                 sx={{ mt: 1, width: '18em' }}
                                 {...register('tipo',
@@ -281,7 +281,6 @@ function Cadastro() {
 }
 
 export default Cadastro;
-
 
 //Validacao
 // Nome da trilha: string-required-100 caracteres;
